@@ -1,8 +1,10 @@
+import css from './profile.module.css';
+
 export const DataCounter = ({ infoType, value }) => {
   return (
-    <li className="counter">
-      <span className="label">{infoType}</span>
-      <span className="quantity">{value}</span>
+    <li className={css.counter}>
+      <span className={css.label}>{infoType}</span>
+      <span className={css.quantity}>{value}</span>
     </li>
   );
 };
