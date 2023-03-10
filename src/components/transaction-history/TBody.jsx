@@ -1,7 +1,7 @@
 import css from './transaction-history.module.css';
+import PropTypes from 'prop-types';
 
 export const TBody = ({ transactions }) => {
-  console.log(transactions);
   return (
     <tbody>
       {transactions.map(transaction => {
@@ -15,4 +15,8 @@ export const TBody = ({ transactions }) => {
       })}
     </tbody>
   );
+};
+
+TBody.propTypes = {
+  transaction: PropTypes.array,
 };

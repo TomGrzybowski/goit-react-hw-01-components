@@ -1,4 +1,5 @@
 import css from './friendlist.module.css';
+import PropTypes from 'prop-types';
 
 export const FriendItem = ({ friend }) => {
   return (
@@ -13,4 +14,8 @@ export const FriendItem = ({ friend }) => {
       <p className={css.name}>{friend.name}</p>
     </li>
   );
+};
+
+FriendItem.propTypes = {
+  friend: PropTypes.object,
 };

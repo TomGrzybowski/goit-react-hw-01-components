@@ -1,5 +1,6 @@
 import css from './friendlist.module.css';
 import { FriendItem } from './item';
+import PropTypes from 'prop-types';
 
 export const Friendlist = ({ friends, numberOfFriendsShown }) => {
   const FriendsToDisplay = [];
@@ -15,4 +16,9 @@ export const Friendlist = ({ friends, numberOfFriendsShown }) => {
       })}
     </ul>
   );
+};
+
+Friendlist.propTypes = {
+  friends: PropTypes.array,
+  numberOfFriendsShown: PropTypes.number,
 };

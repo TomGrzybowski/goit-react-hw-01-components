@@ -1,5 +1,6 @@
 import { DataCounter } from './Data-counter';
 import css from './profile.module.css';
+import PropTypes from 'prop-types';
 
 export const UserData = ({ stats }) => {
   return (
@@ -9,4 +10,8 @@ export const UserData = ({ stats }) => {
       <DataCounter infoType="views" value={stats.views} />
     </ul>
   );
+};
+
+UserData.propTypes = {
+  stats: PropTypes.object,
 };
